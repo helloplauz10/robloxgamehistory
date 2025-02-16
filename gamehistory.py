@@ -5,6 +5,7 @@ try:
     import requests
 except ImportError:
     os.system(f"{sys.exectable} -m pip install requests")
+    import requests
 
 def fetchDataFromPlaceId(placeId):
     universeId = requests.get(f"https://apis.roblox.com/universes/v1/places/{placeId}/universe").json()
